@@ -1,6 +1,4 @@
 from shiny import App, render, ui
-import matplotlib.pyplot as plt
-import numpy as np
 
 app_ui = ui.page_fluid(
     ui.panel_title("Hello Shiny!"),
@@ -13,7 +11,6 @@ def server(input, output, session):
     @render.text
     def txt():
         return f"n*2 is {input.n() * 2}"
-
 
 
 app = App(app_ui, server)
